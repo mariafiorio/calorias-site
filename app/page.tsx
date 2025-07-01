@@ -7,6 +7,9 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       {/* Mobile-optimized Header */}
+      <head>
+      <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
+      </head>
       <header className="bg-white shadow-sm border-b">
         <div className="px-4 py-3">
           <h1 className="text-xl md:text-2xl font-bold text-gray-900 text-center">calorias.live</h1>

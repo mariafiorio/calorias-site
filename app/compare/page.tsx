@@ -63,6 +63,9 @@ export default function ComparePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Mobile-optimized Header */}
+      <head>
+      <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
+      </head>
       <header className="bg-white shadow-sm border-b">
         <div className="px-4 py-3">
           <div className="flex items-center justify-between">
