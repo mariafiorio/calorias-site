@@ -2,13 +2,14 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Calculator, ArrowLeft, AlertCircle } from "lucide-react"
+import { Calculator, ArrowLeft, AlertCircle , Info} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Label } from "@/components/ui/label"
+import Head from 'next/head';
 
 interface FoodItem {
   id: string
@@ -59,11 +60,13 @@ export default function EquivalencePage() {
   }
 
   return (
+    <>  
+    <Head>
+    <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
+    </Head>
     <div className="min-h-screen bg-gray-50">
       {/* Mobile-optimized Header */}
-      <head>
-      <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
-      </head>
+  
       <header className="bg-white shadow-sm border-b">
         <div className="px-4 py-3">
           <div className="flex items-center justify-between">
@@ -95,6 +98,8 @@ export default function EquivalencePage() {
           </CardHeader>
           <CardContent>
             {foodItems.length < 2 ? (
+              <div className="space-y-4">
+
               <Alert>
                 <AlertCircle className="h-4 w-4" />
                 <AlertDescription className="text-sm">
@@ -104,6 +109,44 @@ export default function EquivalencePage() {
                   </Link>
                 </AlertDescription>
               </Alert>
+
+                {/* Additional content for better content-to-ad ratio */}
+                <div className="bg-purple-50 p-4 rounded-lg mt-4">
+                  <h3 className="font-medium text-purple-800 mb-2 flex items-center">
+                    <Info className="w-4 h-4 mr-1" /> Understanding Food Equivalence
+                  </h3>
+                  <p className="text-sm text-purple-700 mb-3">
+                    Food equivalence helps you understand how much of one food equals another in terms of calories,
+                    allowing you to make substitutions in your diet.
+                  </p>
+                  <h4 className="font-medium text-purple-800 mb-1">How it works:</h4>
+                  <ul className="list-disc pl-5 text-sm text-purple-700 space-y-1">
+                    <li>Select a source food and amount</li>
+                    <li>Select a target food you want to substitute with</li>
+                    <li>
+                      The calculator determines how much of the target food equals the calories in your source food
+                    </li>
+                    <li>Use this information to make informed substitutions</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h3 className="font-medium text-gray-800 mb-2">Example Equivalence</h3>
+                  <div className="text-center space-y-3">
+                    <div className="p-3 bg-white rounded-lg">
+                      <p className="text-sm text-gray-700 font-medium">
+                        <strong>100g</strong> of <strong>Rice (130 kcal)</strong>
+                      </p>
+                    </div>
+                    <div className="text-xl font-bold text-purple-600">≈</div>
+                    <div className="p-3 bg-white rounded-lg">
+                      <p className="text-sm text-gray-700 font-medium">
+                        <strong>250g</strong> of <strong>Broccoli (52 kcal)</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             ) : (
               <div className="space-y-6">
                 {/* Source Food - Mobile optimized */}
@@ -222,10 +265,20 @@ export default function EquivalencePage() {
                   </div>
                 </div>
               </div>
+                {/* Additional content for better content-to-ad ratio */}
+                <div className="mt-6 bg-purple-50 p-4 rounded-lg">
+                <h4 className="font-medium text-purple-800 mb-2">Substitution Tip</h4>
+                <p className="text-sm text-purple-700">
+                  When substituting foods, consider the volume difference. Lower calorie foods often have more volume,
+                  which can help you feel fuller while consuming fewer calories. This is especially true for vegetables
+                  and fruits compared to more calorie-dense foods.
+                </p>
+              </div>
             </CardContent>
           </Card>
         )}
       </main>
     </div>
+    </>
   )
 }

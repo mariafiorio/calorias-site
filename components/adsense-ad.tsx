@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 interface AdSenseAdProps {
   adSlot: string
@@ -10,6 +10,7 @@ interface AdSenseAdProps {
   fullWidthResponsive?: boolean
   style?: React.CSSProperties
   className?: string
+  contentCheck?: () => boolean // Function to check if content exists
 }
 
 declare global {
@@ -24,16 +25,28 @@ export default function AdSenseAd({
   fullWidthResponsive = true,
   style = { display: "block" },
   className = "",
+  contentCheck = () => true, // Default to true if no check provided
 }: AdSenseAdProps) {
+  const [shouldRender, setShouldRender] = useState(false)
+
   useEffect(() => {
-    try {
-      if (typeof window !== "undefined" && window.adsbygoogle) {
-        window.adsbygoogle.push({})
+    // Only render ads if content check passes
+    if (contentCheck()) {
+      setShouldRender(true)
+
+      try {
+        if (typeof window !== "undefined" && window.adsbygoogle) {
+          window.adsbygoogle.push({})
+        }
+      } catch (error) {
+        console.error("AdSense error:", error)
       }
-    } catch (error) {
-      console.error("AdSense error:", error)
     }
-  }, [])
+  }, [contentCheck])
+
+  if (!shouldRender) {
+    return null
+  }
 
   return (
     <div className={className}>

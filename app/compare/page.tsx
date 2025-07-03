@@ -2,13 +2,14 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Scale, ArrowLeft, AlertCircle } from "lucide-react"
+import { Scale, ArrowLeft, AlertCircle, Info } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Alert, AlertDescription } from "@/components/ui/alert"
+import Head from 'next/head';
 
 interface FoodItem {
   id: string
@@ -61,11 +62,13 @@ export default function ComparePage() {
   }
 
   return (
+    <>  
+    <Head>
+    <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
+    </Head>
     <div className="min-h-screen bg-gray-50">
       {/* Mobile-optimized Header */}
-      <head>
-      <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
-      </head>
+ 
       <header className="bg-white shadow-sm border-b">
         <div className="px-4 py-3">
           <div className="flex items-center justify-between">
@@ -97,6 +100,8 @@ export default function ComparePage() {
           </CardHeader>
           <CardContent>
             {foodItems.length < 2 ? (
+                            <div className="space-y-4">
+
               <Alert>
                 <AlertCircle className="h-4 w-4" />
                 <AlertDescription className="text-sm">
@@ -106,6 +111,42 @@ export default function ComparePage() {
                   </Link>
                 </AlertDescription>
               </Alert>
+
+                {/* Additional content for better content-to-ad ratio */}
+                <div className="bg-blue-50 p-4 rounded-lg mt-4">
+                  <h3 className="font-medium text-blue-800 mb-2 flex items-center">
+                    <Info className="w-4 h-4 mr-1" /> How Food Comparison Works
+                  </h3>
+                  <p className="text-sm text-blue-700 mb-3">
+                    Food comparison helps you understand the caloric differences between foods, allowing you to make
+                    better dietary choices.
+                  </p>
+                  <h4 className="font-medium text-blue-800 mb-1">With this tool you can:</h4>
+                  <ul className="list-disc pl-5 text-sm text-blue-700 space-y-1">
+                    <li>Compare the caloric content of different foods</li>
+                    <li>See percentage differences between foods</li>
+                    <li>Adjust quantities to match your portions</li>
+                    <li>Make informed decisions about your diet</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h3 className="font-medium text-gray-800 mb-2">Example Comparison</h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-blue-50 p-3 rounded-lg">
+                      <h4 className="font-medium text-blue-900 mb-1 text-sm">Apple (100g)</h4>
+                      <p className="text-lg font-bold text-blue-700">52 kcal</p>
+                    </div>
+                    <div className="bg-green-50 p-3 rounded-lg">
+                      <h4 className="font-medium text-green-900 mb-1 text-sm">Banana (100g)</h4>
+                      <p className="text-lg font-bold text-green-700">89 kcal</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-600 mt-3">
+                    In this example, a banana has 71% more calories than an apple for the same weight.
+                  </p>
+                </div>
+              </div>
             ) : (
               <div className="space-y-6">
                 {/* First Food - Mobile optimized */}
@@ -269,10 +310,20 @@ export default function ComparePage() {
                   </p>
                 </div>
               </div>
+              {/* Additional content for better content-to-ad ratio */}
+              <div className="mt-6 bg-blue-50 p-4 rounded-lg">
+                <h4 className="font-medium text-blue-800 mb-2">Nutrition Tip</h4>
+                <p className="text-sm text-blue-700">
+                  When comparing foods, remember that calories aren't everything. Consider the nutritional value,
+                  including protein, fiber, vitamins, and minerals. Foods with similar calorie counts can have vastly
+                  different nutritional profiles.
+                </p>
+              </div>
             </CardContent>
           </Card>
         )}
       </main>
     </div>
+    </>
   )
 }

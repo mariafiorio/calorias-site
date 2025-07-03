@@ -1,15 +1,18 @@
 import Link from "next/link"
-import { Calculator, Scale, Plus, Save } from "lucide-react"
+import { Calculator, Scale, Plus, Save, Info } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Head from 'next/head';
 
 export default function HomePage() {
   return (
+    <>  
+    <Head>
+    <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
+    </Head>
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       {/* Mobile-optimized Header */}
-      <head>
-      <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
-      </head>
+
       <header className="bg-white shadow-sm border-b">
         <div className="px-4 py-3">
           <h1 className="text-xl md:text-2xl font-bold text-gray-900 text-center">calorias.live</h1>
@@ -85,7 +88,39 @@ export default function HomePage() {
             </CardContent>
           </Card>
         </div>
+     {/* Educational Content - Added for better content-to-ad ratio */}
+     <Card className="mb-8">
+          <CardHeader>
+            <CardTitle className="flex items-center">
+              <Info className="w-5 h-5 mr-2 text-blue-600" />
+              Understanding Calories
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <p className="text-gray-700">
+                A calorie is a unit of energy. In nutrition, calories refer to the energy people get from the food and
+                drink they consume, and the energy they use during physical activity.
+              </p>
 
+              <h3 className="font-medium text-gray-900">Why Count Calories?</h3>
+              <p className="text-gray-700">Counting calories can help you:</p>
+              <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                <li>Maintain a healthy weight</li>
+                <li>Lose weight in a controlled manner</li>
+                <li>Gain weight if needed</li>
+                <li>Make more informed food choices</li>
+              </ul>
+
+              <h3 className="font-medium text-gray-900">Calorie Needs</h3>
+              <p className="text-gray-700">
+                The average adult needs about 2,000-2,500 calories per day, but this varies based on age, gender,
+                weight, height, and activity level. Athletes may need significantly more, while those trying to lose
+                weight may aim for fewer calories.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
         {/* AdSense Rectangle Space - Mobile optimized */}
         <div className="bg-gray-100 h-48 md:h-64 flex items-center justify-center text-gray-500 text-xs md:text-sm mb-8 rounded-lg">
           [AdSense Rectangle - Mobile: 300x250, Desktop: 336x280]
@@ -120,6 +155,62 @@ export default function HomePage() {
             </Card>
           </Link>
         </div>
+
+        {/* Additional Educational Content - Added for better content-to-ad ratio */}
+        <Card className="mt-8">
+          <CardHeader>
+            <CardTitle>Common Food Calorie Reference</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-gray-50">
+                    <th className="text-left p-2 border-b">Food (100g)</th>
+                    <th className="text-right p-2 border-b">Calories</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="p-2 border-b">Apple</td>
+                    <td className="text-right p-2 border-b">52 kcal</td>
+                  </tr>
+                  <tr>
+                    <td className="p-2 border-b">Banana</td>
+                    <td className="text-right p-2 border-b">89 kcal</td>
+                  </tr>
+                  <tr>
+                    <td className="p-2 border-b">Chicken Breast</td>
+                    <td className="text-right p-2 border-b">165 kcal</td>
+                  </tr>
+                  <tr>
+                    <td className="p-2 border-b">Brown Rice (cooked)</td>
+                    <td className="text-right p-2 border-b">112 kcal</td>
+                  </tr>
+                  <tr>
+                    <td className="p-2 border-b">Broccoli</td>
+                    <td className="text-right p-2 border-b">34 kcal</td>
+                  </tr>
+                  <tr>
+                    <td className="p-2 border-b">Salmon</td>
+                    <td className="text-right p-2 border-b">208 kcal</td>
+                  </tr>
+                  <tr>
+                    <td className="p-2 border-b">Egg</td>
+                    <td className="text-right p-2 border-b">155 kcal</td>
+                  </tr>
+                  <tr>
+                    <td className="p-2 border-b">Avocado</td>
+                    <td className="text-right p-2 border-b">160 kcal</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-gray-500 mt-3">
+              Note: Values are approximate and may vary based on specific varieties and preparation methods.
+            </p>
+          </CardContent>
+        </Card>
       </main>
 
       {/* Footer - Mobile optimized */}
@@ -129,8 +220,13 @@ export default function HomePage() {
         </div>
         <div className="px-4 py-6 text-center text-gray-600 text-sm">
           <p>&copy; 2024 Food Calorie Calculator. All rights reserved.</p>
+          <p className="mt-2">
+            This tool is designed for educational purposes only. Always consult with a healthcare professional before
+            making significant changes to your diet.
+          </p>
         </div>
       </footer>
     </div>
+    </>
   )
 }

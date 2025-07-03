@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import Head from 'next/head';
 
 interface FoodItem {
   id: string
@@ -61,12 +62,25 @@ export default function RegisterPage() {
     saveFoodItems(updatedItems)
   }
 
+    // Add some example food items for new users to ensure content
+    const addExampleFoods = () => {
+      const exampleFoods = [
+        { id: "ex1", name: "Apple", calories: 52, amount: 100, unit: "g" },
+        { id: "ex2", name: "Banana", calories: 89, amount: 100, unit: "g" },
+        { id: "ex3", name: "Chicken Breast", calories: 165, amount: 100, unit: "g" },
+        { id: "ex4", name: "Brown Rice", calories: 112, amount: 100, unit: "g" },
+      ]
+      saveFoodItems([...foodItems, ...exampleFoods])
+    }
+
   return (
+    <>  
+    <Head>
+    <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
+    </Head>
     <div className="min-h-screen bg-gray-50">
       {/* Mobile-optimized Header */}
-      <head>
-      <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
-      </head>
+
       <header className="bg-white shadow-sm border-b">
         <div className="px-4 py-3">
           <div className="flex items-center justify-between">
@@ -160,10 +174,10 @@ export default function RegisterPage() {
             </CardContent>
           </Card>
 
-          {/* AdSense Rectangle Space - Mobile optimized */}
+          {/* AdSense Rectangle Space - Mobile optimized
           <div className="bg-gray-100 h-48 md:h-64 flex items-center justify-center text-gray-500 text-xs md:text-sm rounded-lg">
             [AdSense Rectangle - Mobile: 300x250, Desktop: 336x280]
-          </div>
+          </div> */}
 
           {/* Registered Items List - Mobile optimized */}
           <Card>
@@ -176,7 +190,23 @@ export default function RegisterPage() {
                 <div className="text-center py-8 text-gray-500">
                   <Plus className="w-12 h-12 mx-auto mb-4 text-gray-300" />
                   <p className="text-base mb-1">Ainda não há itens registrados.</p>
-                  <p className="text-sm">Adicione seu primeiro alimento acima!</p>
+                  <p className="text-sm mb-4">Adicione seu primeiro alimento acima!</p>
+
+                {/* Add example foods button */}
+                <Button onClick={addExampleFoods} variant="outline" className="mx-auto bg-transparent">
+                  Add Example Foods
+                </Button>
+
+                {/* Additional helpful content */}
+                <div className="mt-6 text-left bg-blue-50 p-4 rounded-lg">
+                  <h3 className="font-medium text-blue-800 mb-2">Getting Started Tips:</h3>
+                  <ul className="list-disc pl-5 text-sm text-blue-700 space-y-1">
+                    <li>Start by adding foods you eat regularly</li>
+                    <li>Be precise with calorie values for accurate comparisons</li>
+                    <li>Use the same unit (g) for consistent calculations</li>
+                    <li>You can always edit or delete items later</li>
+                  </ul>
+                </div>
                 </div>
               ) : (
                 <div className="space-y-3 max-h-80 overflow-y-auto">
@@ -201,10 +231,31 @@ export default function RegisterPage() {
                   ))}
                 </div>
               )}
+               {/* Only show ads when there's content
+               {foodItems.length > 0 && (
+                <AdSenseAd
+                  adSlot="0987654321"
+                  adFormat="rectangle"
+                  className="h-48 md:h-64 flex items-center justify-center rounded-lg mt-6"
+                />
+              )} */}
+
+              {/* Additional content for better content-to-ad ratio */}
+              {foodItems.length > 0 && (
+                <div className="mt-6 bg-green-50 p-4 rounded-lg">
+                  <h3 className="font-medium text-green-800 mb-2">Did you know?</h3>
+                  <p className="text-sm text-green-700">
+                    Tracking your food's caloric content can help you make more informed dietary choices. The average
+                    adult needs about 2,000-2,500 calories per day, but this varies based on age, gender, weight,
+                    height, and activity level.
+                  </p>
+                </div>
+              )}
             </CardContent>
           </Card>
         </div>
       </main>
     </div>
+    </>
   )
 }
