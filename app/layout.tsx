@@ -8,11 +8,14 @@ import { Analytics } from "@vercel/analytics/next"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Food Calorie Calculator - Compare & Calculate Food Calories",
+  title: "Comparar Calorias - Compare & Calcule calorias de alimentos",
+  icons: {
+    icon: '/favicon.ico', 
+  },
   description:
-    "Register food items, compare their caloric content, and calculate equivalences to make informed dietary choices.",
-  keywords: "food calories, calorie calculator, food comparison, nutrition, diet",
-    generator: 'v0.dev'
+    "Registre itens, compare seu conteúdo calórico e calcule equivalências para fazer melhores escolhas diéticas.",
+  keywords: "calorias, calculadora de calorias, comparar calorias, comparar alimentos, nutrição, dieta, saúde, comparador de calorias, emagrecer",
+    generator: 'MariaF'
 }
 
 export default function RootLayout({
