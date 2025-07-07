@@ -322,6 +322,138 @@ export default function ComparePage() {
             </CardContent>
           </Card>
         )}
+                {/* Educational Content Section */}
+                <Card className="mt-8">
+          <CardHeader>
+            <CardTitle>Entendendo a Comparação de Calorias</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <p className="text-gray-700">
+                A comparação calórica é uma ferramenta poderosa para fazer escolhas alimentares mais conscientes.
+                Entenda como interpretar os resultados e aplicá-los na sua dieta.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h3 className="font-medium text-gray-900 mb-3">Fatores Além das Calorias</h3>
+                  <div className="space-y-2">
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="font-medium text-sm">Índice Glicêmico</h4>
+                        <p className="text-xs text-gray-600">Como o alimento afeta o açúcar no sangue</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="font-medium text-sm">Densidade Nutricional</h4>
+                        <p className="text-xs text-gray-600">Quantidade de nutrientes por caloria</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="font-medium text-sm">Saciedade</h4>
+                        <p className="text-xs text-gray-600">Capacidade de promover sensação de satisfação</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-medium text-gray-900 mb-3">Como Usar as Comparações</h3>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1 text-sm">
+                    <li>Identifique alternativas mais saudáveis</li>
+                    <li>Ajuste porções para equilibrar calorias</li>
+                    <li>Planeje refeições balanceadas</li>
+                    <li>Faça substituições inteligentes</li>
+                    <li>Monitore o progresso dos seus objetivos</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Comparison Examples */}
+        <Card className="mt-6">
+          <CardHeader>
+            <CardTitle>Exemplos Práticos de Comparações</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-lg">
+                <h4 className="font-medium text-gray-900 mb-2">Lanches Saudáveis</h4>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <p className="font-medium text-green-700">1 maçã média (150g)</p>
+                    <p className="text-green-600">≈ 78 kcal</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-red-700">1 barra de chocolate (30g)</p>
+                    <p className="text-red-600">≈ 150 kcal</p>
+                  </div>
+                </div>
+                <p className="text-xs text-gray-600 mt-2">
+                  A maçã oferece fibras, vitaminas e maior saciedade com menos calorias.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg">
+                <h4 className="font-medium text-gray-900 mb-2">Proteínas</h4>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <p className="font-medium text-blue-700">Peito de frango grelhado (100g)</p>
+                    <p className="text-blue-600">≈ 165 kcal</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-purple-700">Carne bovina (100g)</p>
+                    <p className="text-purple-600">≈ 250 kcal</p>
+                  </div>
+                </div>
+                <p className="text-xs text-gray-600 mt-2">
+                  Ambos são ricos em proteína, mas o frango tem menos gordura saturada.
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Tips for Better Comparisons */}
+        <Card className="mt-6">
+          <CardHeader>
+            <CardTitle>Dicas para Comparações Mais Eficazes</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-medium text-gray-900 mb-2">Ao Comparar Alimentos</h4>
+                <ul className="list-disc pl-5 text-gray-700 space-y-1 text-sm">
+                  <li>Compare alimentos da mesma categoria</li>
+                  <li>Considere o contexto da refeição</li>
+                  <li>Avalie a qualidade nutricional geral</li>
+                  <li>Pense na praticidade de preparo</li>
+                  <li>Considere seus objetivos pessoais</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="font-medium text-gray-900 mb-2">Interpretando Resultados</h4>
+                <ul className="list-disc pl-5 text-gray-700 space-y-1 text-sm">
+                  <li>Diferenças &lt;20% são pequenas</li>
+                  <li>Diferenças &gt;50% são significativas</li>
+                  <li>Considere o volume/peso do alimento</li>
+                  <li>Avalie a frequência de consumo</li>
+                  <li>Pense no impacto a longo prazo</li>
+                </ul>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </main>
     </div>
     </>

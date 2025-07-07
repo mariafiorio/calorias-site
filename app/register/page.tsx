@@ -253,6 +253,104 @@ export default function RegisterPage() {
               )}
             </CardContent>
           </Card>
+
+          {/* Educational Content Section */}
+          <Card className="mt-8">
+            <CardHeader>
+              <CardTitle>Como Registrar Alimentos Corretamente</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <p className="text-gray-700">
+                  Registrar alimentos com precisão é fundamental para um controle calórico eficaz. Aqui estão algumas
+                  dicas importantes:
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="font-medium text-gray-900 mb-2">Dicas de Precisão</h3>
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1 text-sm">
+                      <li>Use sempre a mesma unidade de medida (gramas)</li>
+                      <li>Consulte tabelas nutricionais confiáveis</li>
+                      <li>Considere o método de preparo (cru vs cozido)</li>
+                      <li>Seja específico com variedades (maçã gala vs fuji)</li>
+                      <li>Registre alimentos que você consome regularmente</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="font-medium text-gray-900 mb-2">Fontes Confiáveis</h3>
+                    <ul className="list-disc pl-5 text-gray-700 space-y-1 text-sm">
+                      <li>TACO - Tabela Brasileira de Composição de Alimentos</li>
+                      <li>Rótulos nutricionais dos produtos</li>
+                      <li>USDA Food Database</li>
+                      <li>Aplicativos de nutrição certificados</li>
+                      <li>Consulta com nutricionistas</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Food Categories Guide */}
+          <Card className="mt-6">
+            <CardHeader>
+              <CardTitle>Categorias de Alimentos e Suas Características Calóricas</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h4 className="font-medium text-green-800 mb-2">Frutas e Vegetais</h4>
+                  <p className="text-sm text-green-700 mb-2">Geralmente 15-80 kcal/100g</p>
+                  <p className="text-xs text-green-600">
+                    Ricos em água, fibras e micronutrientes. Ideais para controle de peso.
+                  </p>
+                </div>
+
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h4 className="font-medium text-blue-800 mb-2">Proteínas</h4>
+                  <p className="text-sm text-blue-700 mb-2">Geralmente 100-250 kcal/100g</p>
+                  <p className="text-xs text-blue-600">Carnes, peixes, ovos e leguminosas. Essenciais para músculos.</p>
+                </div>
+
+                <div className="bg-orange-50 p-4 rounded-lg">
+                  <h4 className="font-medium text-orange-800 mb-2">Carboidratos</h4>
+                  <p className="text-sm text-orange-700 mb-2">Geralmente 80-350 kcal/100g</p>
+                  <p className="text-xs text-orange-600">Cereais, tubérculos e grãos. Principal fonte de energia.</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Common Mistakes Section */}
+          <Card className="mt-6">
+            <CardHeader>
+              <CardTitle>Erros Comuns ao Registrar Alimentos</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                <div className="border-l-4 border-red-400 pl-4">
+                  <h4 className="font-medium text-red-800">Não considerar o método de preparo</h4>
+                  <p className="text-sm text-red-700">
+                    100g de batata crua (77 kcal) ≠ 100g de batata frita (365 kcal)
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-yellow-400 pl-4">
+                  <h4 className="font-medium text-yellow-800">Usar dados genéricos demais</h4>
+                  <p className="text-sm text-yellow-700">"Pão" pode variar de 200 a 400 kcal/100g dependendo do tipo</p>
+                </div>
+
+                <div className="border-l-4 border-blue-400 pl-4">
+                  <h4 className="font-medium text-blue-800">Ignorar temperos e molhos</h4>
+                  <p className="text-sm text-blue-700">
+                    Azeite, manteiga e molhos podem dobrar as calorias de um prato
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </main>
     </div>

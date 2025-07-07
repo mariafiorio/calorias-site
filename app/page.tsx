@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Calculator, Scale, Plus, Save, Info } from "lucide-react"
+import { Calculator, Scale, Plus, Save, Info, BookOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Head from 'next/head';
@@ -88,6 +88,24 @@ export default function HomePage() {
             </CardContent>
           </Card>
         </div>
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle className="flex items-center">
+              <BookOpen className="w-5 h-5 mr-2 text-blue-600" />
+              Blog de Nutrição
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-700 mb-4">
+              Acesse nosso blog com mais de 50 artigos especializados sobre calorias, nutrição e alimentação saudável.
+            </p>
+            <Link href="/blog">
+              <Button variant="outline" className="w-full sm:w-auto bg-transparent">
+                Ver Artigos
+              </Button>
+            </Link>
+          </CardContent>
+        </Card>
      {/* Educational Content - Added for better content-to-ad ratio */}
      <Card className="mb-8">
           <CardHeader>
@@ -127,8 +145,7 @@ export default function HomePage() {
         </div>
 
         {/* Quick Navigation - Mobile optimized */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <Link href="/register" className="block">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">          <Link href="/register" className="block">
             <Card className="hover:shadow-lg transition-shadow cursor-pointer bg-green-50 border-green-200">
               <CardHeader className="text-center py-6">
                 <Plus className="w-8 h-8 mx-auto text-green-600 mb-2" />
@@ -219,6 +236,23 @@ export default function HomePage() {
           [AdSense Footer Banner - Mobile: 320x50, Desktop: 728x90]
         </div>
         <div className="px-4 py-6 text-center text-gray-600 text-sm">
+        <div className="flex flex-wrap justify-center gap-4 mb-4">
+            <Link href="/about" className="hover:text-blue-600">
+              Sobre
+            </Link>
+            <Link href="/privacy" className="hover:text-blue-600">
+              Privacidade
+            </Link>
+            <Link href="/terms" className="hover:text-blue-600">
+              Termos
+            </Link>
+            <Link href="/contact" className="hover:text-blue-600">
+              Contato
+            </Link>
+            <Link href="/blog" className="hover:text-blue-600">
+              Blog
+            </Link>
+          </div>
           <p>&copy; 2024 Food Calorie Calculator. All rights reserved.</p>
           <p className="mt-2">
             This tool is designed for educational purposes only. Always consult with a healthcare professional before

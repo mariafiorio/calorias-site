@@ -277,6 +277,174 @@ export default function EquivalencePage() {
             </CardContent>
           </Card>
         )}
+
+        {/* Educational Content Section */}
+        <Card className="mt-8">
+          <CardHeader>
+            <CardTitle>Entendendo Equivalências Calóricas</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <p className="text-gray-700">
+                As equivalências calóricas ajudam você a fazer substituições inteligentes na sua dieta, mantendo o
+                equilíbrio energético enquanto varia os nutrientes e sabores.
+              </p>
+
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h3 className="font-medium text-blue-800 mb-2">Como Funciona o Cálculo</h3>
+                <p className="text-sm text-blue-700 mb-2">
+                  A equivalência é baseada no conteúdo cal��rico total dos alimentos:
+                </p>
+                <div className="bg-white p-3 rounded border text-sm">
+                  <code className="text-blue-600">
+                    Quantidade Equivalente = (Calorias do Alimento Original × Quantidade Original) ÷ Calorias por grama
+                    do Alimento Substituto
+                  </code>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Practical Examples */}
+        <Card className="mt-6">
+          <CardHeader>
+            <CardTitle>Exemplos Práticos de Equivalências</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-medium text-gray-900 mb-3">Substituições para Perda de Peso</h4>
+                <div className="grid gap-4">
+                  <div className="bg-gradient-to-r from-red-50 to-green-50 p-4 rounded-lg">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-red-700 font-medium">100g Arroz Branco (130 kcal)</span>
+                      <span className="text-gray-500">→</span>
+                      <span className="text-green-700 font-medium">380g Abobrinha (65 kcal)</span>
+                    </div>
+                    <p className="text-xs text-gray-600">Redução de 50% nas calorias com muito mais volume e fibras</p>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-red-50 to-green-50 p-4 rounded-lg">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-red-700 font-medium">50g Chocolate (250 kcal)</span>
+                      <span className="text-gray-500">→</span>
+                      <span className="text-green-700 font-medium">480g Morango (154 kcal)</span>
+                    </div>
+                    <p className="text-xs text-gray-600">
+                      Satisfaça a vontade de doce com menos calorias e mais nutrientes
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-medium text-gray-900 mb-3">Substituições para Ganho de Massa</h4>
+                <div className="grid gap-4">
+                  <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-blue-700 font-medium">100g Peito de Frango (165 kcal)</span>
+                      <span className="text-gray-500">→</span>
+                      <span className="text-purple-700 font-medium">80g Salmão (166 kcal)</span>
+                    </div>
+                    <p className="text-xs text-gray-600">Mesmas calorias, mas com ômega-3 e gorduras boas</p>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-blue-700 font-medium">100g Aveia (389 kcal)</span>
+                      <span className="text-gray-500">→</span>
+                      <span className="text-purple-700 font-medium">85g Quinoa (368 kcal)</span>
+                    </div>
+                    <p className="text-xs text-gray-600">Proteína completa com todos os aminoácidos essenciais</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Advanced Tips */}
+        <Card className="mt-6">
+          <CardHeader>
+            <CardTitle>Estratégias Avançadas de Substituição</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-medium text-gray-900 mb-3">Substituições por Macronutriente</h4>
+                <div className="space-y-3">
+                  <div className="border-l-4 border-green-400 pl-3">
+                    <h5 className="font-medium text-green-800 text-sm">Carboidratos</h5>
+                    <p className="text-xs text-green-700">Prefira integrais: aveia → quinoa → arroz integral</p>
+                  </div>
+
+                  <div className="border-l-4 border-blue-400 pl-3">
+                    <h5 className="font-medium text-blue-800 text-sm">Proteínas</h5>
+                    <p className="text-xs text-blue-700">Varie as fontes: frango → peixe → leguminosas</p>
+                  </div>
+
+                  <div className="border-l-4 border-yellow-400 pl-3">
+                    <h5 className="font-medium text-yellow-800 text-sm">Gorduras</h5>
+                    <p className="text-xs text-yellow-700">Escolha as boas: azeite → abacate → castanhas</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-medium text-gray-900 mb-3">Considerações Importantes</h4>
+                <ul className="list-disc pl-5 text-gray-700 space-y-1 text-sm">
+                  <li>Volume e saciedade podem variar drasticamente</li>
+                  <li>Considere o índice glicêmico dos carboidratos</li>
+                  <li>Avalie a biodisponibilidade dos nutrientes</li>
+                  <li>Pense na praticidade e custo dos alimentos</li>
+                  <li>Considere alergias e intolerâncias</li>
+                  <li>Varie para obter diferentes micronutrientes</li>
+                </ul>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Meal Planning with Equivalences */}
+        <Card className="mt-6">
+          <CardHeader>
+            <CardTitle>Planejamento de Refeições com Equivalências</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <p className="text-gray-700 text-sm">
+                Use equivalências para criar variedade nas suas refeições mantendo o controle calórico:
+              </p>
+
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <h4 className="font-medium text-gray-900 mb-2">Exemplo: Café da Manhã (300 kcal)</h4>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div className="bg-white p-3 rounded">
+                    <h5 className="font-medium text-blue-700">Opção 1</h5>
+                    <p>2 fatias pão integral + 1 ovo</p>
+                  </div>
+                  <div className="bg-white p-3 rounded">
+                    <h5 className="font-medium text-green-700">Opção 2</h5>
+                    <p>1 xícara aveia + 1 banana</p>
+                  </div>
+                  <div className="bg-white p-3 rounded">
+                    <h5 className="font-medium text-purple-700">Opção 3</h5>
+                    <p>200ml iogurte + 30g granola</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h4 className="font-medium text-blue-800 mb-2">Dica Pro</h4>
+                <p className="text-sm text-blue-700">
+                  Crie um "banco" de equivalências dos seus alimentos favoritos para facilitar o planejamento semanal e
+                  evitar monotonia na dieta.
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </main>
     </div>
     </>
