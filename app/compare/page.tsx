@@ -65,6 +65,8 @@ export default function ComparePage() {
     <>  
     <Head>
     <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2627213694460628"
+     crossOrigin="anonymous"></script>
     </Head>
     <div className="min-h-screen bg-gray-50">
       {/* Mobile-optimized Header */}
@@ -82,9 +84,9 @@ export default function ComparePage() {
           </div>
         </div>
         {/* AdSense Banner Space - Mobile optimized */}
-        <div className="bg-gray-100 h-16 md:h-20 flex items-center justify-center text-gray-500 text-xs md:text-sm">
+        {/* <div className="bg-gray-100 h-16 md:h-20 flex items-center justify-center text-gray-500 text-xs md:text-sm">
           [AdSense Banner - Mobile: 320x50, Desktop: 728x90]
-        </div>
+        </div> */}
       </header>
 
       <main className="px-4 py-6 pb-20">
@@ -255,9 +257,9 @@ export default function ComparePage() {
         </Card>
 
         {/* AdSense Rectangle Space - Mobile optimized */}
-        <div className="bg-gray-100 h-48 md:h-64 flex items-center justify-center text-gray-500 text-xs md:text-sm rounded-lg mb-6">
+        {/* <div className="bg-gray-100 h-48 md:h-64 flex items-center justify-center text-gray-500 text-xs md:text-sm rounded-lg mb-6">
           [AdSense Rectangle - Mobile: 300x250, Desktop: 336x280]
-        </div>
+        </div> */}
 
         {/* Results - Mobile optimized */}
         {result && (

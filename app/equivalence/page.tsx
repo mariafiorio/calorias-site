@@ -63,9 +63,11 @@ export default function EquivalencePage() {
     <>  
     <Head>
     <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2627213694460628"
+     crossOrigin="anonymous"></script>
     </Head>
     <div className="min-h-screen bg-gray-50">
-      {/* Mobile-optimized Header */}
+      {/* Mobile- Header */}
   
       <header className="bg-white shadow-sm border-b">
         <div className="px-4 py-3">
@@ -80,9 +82,7 @@ export default function EquivalencePage() {
           </div>
         </div>
         {/* AdSense Banner Space - Mobile optimized */}
-        <div className="bg-gray-100 h-16 md:h-20 flex items-center justify-center text-gray-500 text-xs md:text-sm">
-          [AdSense Banner - Mobile: 320x50, Desktop: 728x90]
-        </div>
+  
       </header>
 
       <main className="px-4 py-6 pb-20">
@@ -228,10 +228,7 @@ export default function EquivalencePage() {
           </CardContent>
         </Card>
 
-        {/* AdSense Rectangle Space - Mobile optimized */}
-        <div className="bg-gray-100 h-48 md:h-64 flex items-center justify-center text-gray-500 text-xs md:text-sm rounded-lg mb-6">
-          [AdSense Rectangle - Mobile: 300x250, Desktop: 336x280]
-        </div>
+      
 
         {/* Results - Mobile optimized */}
         {result && (

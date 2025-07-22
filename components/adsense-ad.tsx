@@ -38,5 +38,6 @@ export default function AdBanner({
       data-ad-format={format}
       data-full-width-responsive="true"
     ></ins>
+    
   );
 }

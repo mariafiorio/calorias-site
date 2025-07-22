@@ -415,6 +415,8 @@ export default function BlogPage() {
     <>  
     <Head>
     <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2627213694460628"
+     crossOrigin="anonymous"></script>
     </Head>
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm border-b">
