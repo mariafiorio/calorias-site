@@ -3,7 +3,6 @@ import { Calculator, Scale, Plus, Save, Info, BookOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Head from 'next/head';
-import AdBanner from "@/components/adsense-ad";
 
 export default function HomePage() {
   return (
@@ -24,7 +23,6 @@ export default function HomePage() {
           <h1 className="text-xl md:text-2xl font-bold text-gray-900 text-center">calorias.live</h1>
         </div>
         {/* AdSense Banner Space - Mobile optimized */}
-            <AdBanner slot="3927772103" />
 
       </header>
 
@@ -244,7 +242,6 @@ export default function HomePage() {
 
       {/* Footer - Mobile optimized */}
       <footer className="bg-white border-t mt-8">
-              <AdBanner slot="3927772103" />
 
         <div className="px-4 py-6 text-center text-gray-600 text-sm">
         <div className="flex flex-wrap justify-center gap-4 mb-4">

@@ -10,7 +10,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import Head from 'next/head';
-import AdBanner from "@/components/adsense-ad"
 
 interface FoodItem {
   id: string
@@ -100,7 +99,6 @@ export default function RegisterPage() {
         {/* <div className="bg-gray-100 h-16 md:h-20 flex items-center justify-center text-gray-500 text-xs md:text-sm">
           [AdSense Banner - Mobile: 320x50, Desktop: 728x90]
         </div> */}
-                <AdBanner slot="3927772103" />
 
       </header>
 
@@ -178,7 +176,6 @@ export default function RegisterPage() {
               </form>
             </CardContent>
           </Card>
-        <AdBanner slot="3927772103" />
 
           {/* AdSense Rectangle Space - Mobile optimized
           <div className="bg-gray-100 h-48 md:h-64 flex items-center justify-center text-gray-500 text-xs md:text-sm rounded-lg">
@@ -237,8 +234,6 @@ export default function RegisterPage() {
                   ))}
                 </div>
               )}
-                      <AdBanner slot="3927772103" />
-
                {/* Only show ads when there's content
                {foodItems.length > 0 && (
                 <AdSenseAd

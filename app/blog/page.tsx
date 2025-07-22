@@ -1,9 +1,7 @@
 import Link from "next/link"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import AdSenseAd from "@/components/adsense-ad"
 import Head from "next/head"
-import AdBanner from "@/components/adsense-ad"
 
 const articles = [
   {
@@ -434,7 +432,6 @@ export default function BlogPage() {
           adFormat="horizontal"
           className="h-16 md:h-20 flex items-center justify-center"
         /> */}
-                <AdBanner slot="3927772103" />
 
       </header>
 
@@ -478,7 +475,6 @@ export default function BlogPage() {
             adFormat="rectangle"
             className="h-64 flex items-center justify-center rounded-lg my-8"
           /> */}
-         <AdBanner slot="3927772103" />
 
         </div>
       </main>
