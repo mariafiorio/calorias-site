@@ -29,6 +29,8 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
       <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2627213694460628"
+     crossOrigin="anonymous"></script>
       </head>
       <body className={`${inter.className} pb-20 md:pb-0`}>
         {children}
