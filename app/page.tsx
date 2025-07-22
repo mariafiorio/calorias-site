@@ -146,7 +146,14 @@ export default function HomePage() {
         </Card>
         {/* AdSense Rectangle Space - Mobile optimized */}
         <div className="bg-gray-100 h-48 md:h-64 flex items-center justify-center text-gray-500 text-xs md:text-sm mb-8 rounded-lg">
-          [AdSense Rectangle - Mobile: 300x250, Desktop: 336x280]
+          <ins
+  className="adsbygoogle"
+  style={{ display: "block" }}
+  data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+  data-ad-slot="1234567890"
+  data-ad-format="auto"
+></ins>
+
         </div>
 
         {/* Quick Navigation - Mobile optimized */}
