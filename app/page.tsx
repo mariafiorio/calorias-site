@@ -143,16 +143,6 @@ export default function HomePage() {
           </CardContent>
         </Card>
         {/* AdSense Rectangle Space - Mobile optimized */}
-        <div className="bg-gray-100 h-48 md:h-64 flex items-center justify-center text-gray-500 text-xs md:text-sm mb-8 rounded-lg">
-          <ins
-  className="adsbygoogle"
-  style={{ display: "block" }}
-  data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-  data-ad-slot="1234567890"
-  data-ad-format="auto"
-></ins>
-
-        </div>
 
         {/* Quick Navigation - Mobile optimized */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">          <Link href="/register" className="block">
