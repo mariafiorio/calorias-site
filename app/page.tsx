@@ -3,12 +3,18 @@ import { Calculator, Scale, Plus, Save, Info, BookOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Head from 'next/head';
+import AdBanner from "@/components/adsense-ad";
 
 export default function HomePage() {
   return (
     <>  
     <Head>
     <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
+      <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2627213694460628"
+    crossOrigin="anonymous"
+  ></script>
     </Head>
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       {/* Mobile-optimized Header */}
@@ -18,9 +24,8 @@ export default function HomePage() {
           <h1 className="text-xl md:text-2xl font-bold text-gray-900 text-center">calorias.live</h1>
         </div>
         {/* AdSense Banner Space - Mobile optimized */}
-        <div className="bg-gray-100 h-16 md:h-20 flex items-center justify-center text-gray-500 text-xs md:text-sm">
-          [AdSense Banner - Mobile: 320x50, Desktop: 728x90]
-        </div>
+            <AdBanner slot="3927772103" />
+
       </header>
 
       <main className="px-4 py-6 pb-20">
@@ -232,9 +237,8 @@ export default function HomePage() {
 
       {/* Footer - Mobile optimized */}
       <footer className="bg-white border-t mt-8">
-        <div className="bg-gray-100 h-16 md:h-20 flex items-center justify-center text-gray-500 text-xs md:text-sm">
-          [AdSense Footer Banner - Mobile: 320x50, Desktop: 728x90]
-        </div>
+              <AdBanner slot="3927772103" />
+
         <div className="px-4 py-6 text-center text-gray-600 text-sm">
         <div className="flex flex-wrap justify-center gap-4 mb-4">
             <Link href="/about" className="hover:text-blue-600">
