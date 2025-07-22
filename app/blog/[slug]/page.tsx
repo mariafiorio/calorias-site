@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import AdSenseAd from "@/components/adsense-ad"
 import { notFound } from "next/navigation"
 import Head from "next/head"
+import { MBCalculator } from "@/components/mb-calculadora"
 
 const articles: Record<
   string,
@@ -271,6 +272,9 @@ const articles: Record<
     readTime: "6 min",
     category: "Metabolismo",
     content: `
+
+    <MBCalculator />
+
       <p>O metabolismo basal representa a quantidade mínima de energia que seu corpo precisa para manter funções vitais, como respiração, circulação e regulação da temperatura, mesmo em repouso absoluto.</p>
   
       <h2>O Que é Metabolismo Basal?</h2>
@@ -1055,6 +1059,9 @@ export default async function ArticlePage({ params }: PageProps) {
       <main className="max-w-4xl mx-auto px-4 py-8">
         <Card>
           <CardContent className="prose prose-lg max-w-none p-8">
+                              {(await params).slug === "metabolismo-basal-como-calcular" && (
+        <MBCalculator />
+      )}
             <div dangerouslySetInnerHTML={{ __html: article.content }} />
           </CardContent>
         </Card>
