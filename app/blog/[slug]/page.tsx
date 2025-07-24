@@ -26,7 +26,6 @@ const articles: Record<
     category: "Nutrição",
     content: `
       <p>Calcular suas necessidades calóricas diárias é fundamental para manter um peso saudável e atingir seus objetivos de saúde. O cálculo envolve diversos fatores como idade, sexo, peso, altura e nível de atividade física.</p>
-
       <h2>Metabolismo Basal (TMB)</h2>
       <p>O primeiro passo é calcular seu metabolismo basal usando a fórmula de Harris-Benedict:</p>
       <ul>
