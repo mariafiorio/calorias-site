@@ -62,6 +62,14 @@ export default function EquivalencePage() {
   return (
     <>  
     <Head>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST7RSG0Q52"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments)}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ST7RSG0Q52');
+</script>
     <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2627213694460628"
      crossOrigin="anonymous"></script>

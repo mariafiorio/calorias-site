@@ -1021,6 +1021,14 @@ export default async function ArticlePage({ params }: PageProps) {
   return (
     <>  
     <Head>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST7RSG0Q52"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments)}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ST7RSG0Q52');
+</script>
     <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
     </Head>
     <div className="min-h-screen bg-gray-50">
