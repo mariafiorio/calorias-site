@@ -167,7 +167,7 @@ export default function EquivalencePage() {
                   <h3 className="font-medium text-gray-900 text-base">Na minha dieta, preciso comer:</h3>
                   <div className="space-y-3">
                     <div>
-                      <Label className="text-sm font-medium">Amount</Label>
+                      <Label className="text-sm font-medium">Quantidade</Label>
                       <div className="flex mt-1">
                         <Input
                           type="number"
@@ -181,10 +181,10 @@ export default function EquivalencePage() {
                       </div>
                     </div>
                     <div>
-                      <Label className="text-sm font-medium">Food</Label>
+                      <Label className="text-sm font-medium">Alimento</Label>
                       <Select value={sourceFood} onValueChange={setSourceFood}>
                         <SelectTrigger className="mt-1 h-12">
-                          <SelectValue placeholder="Select food" />
+                          <SelectValue placeholder="Selecionar" />
                         </SelectTrigger>
                         <SelectContent>
                           {foodItems.map((item) => (
@@ -205,12 +205,12 @@ export default function EquivalencePage() {
 
                 {/* Target Food - Mobile optimized */}
                 <div className="space-y-4 p-4 bg-blue-50 rounded-lg">
-                  <h3 className="font-medium text-gray-900 text-base">But I want to eat:</h3>
+                  <h3 className="font-medium text-gray-900 text-base">Mas eu quero comer:</h3>
                   <div>
-                    <Label className="text-sm font-medium">Food</Label>
+                    <Label className="text-sm font-medium">Alimento</Label>
                     <Select value={targetFood} onValueChange={setTargetFood}>
                       <SelectTrigger className="mt-1 h-12">
-                        <SelectValue placeholder="Select food" />
+                        <SelectValue placeholder="Selecionar" />
                       </SelectTrigger>
                       <SelectContent>
                         {foodItems.map((item) => (
@@ -247,14 +247,14 @@ export default function EquivalencePage() {
         {result && (
           <Card>
             <CardHeader className="pb-4">
-              <CardTitle className="text-lg">Equivalence Result</CardTitle>
+              <CardTitle className="text-lg">Equivalência Calórica</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg">
                 <div className="text-center space-y-4">
                   <div className="p-3 bg-white rounded-lg">
                     <p className="text-base text-gray-700 font-medium">
-                      <strong>{result.sourceAmount}g</strong> of
+                      <strong>{result.sourceAmount}g</strong> de
                     </p>
                     <p className="text-lg font-bold text-purple-600 truncate">{result.sourceFood}</p>
                   </div>
@@ -263,25 +263,25 @@ export default function EquivalencePage() {
 
                   <div className="p-3 bg-white rounded-lg">
                     <p className="text-base text-gray-700 font-medium">
-                      <strong>{result.targetAmount.toFixed(1)}g</strong> of
+                      <strong>{result.targetAmount.toFixed(1)}g</strong> de
                     </p>
                     <p className="text-lg font-bold text-blue-600 truncate">{result.targetFood}</p>
                   </div>
 
                   <div className="bg-white p-3 rounded-md">
                     <p className="text-sm text-gray-600">
-                      Both contain approximately <strong>{result.calories.toFixed(1)} kcal</strong>
+                      Ambos contêm aproximadamente <strong>{result.calories.toFixed(1)} kcal</strong>
                     </p>
                   </div>
                 </div>
               </div>
                 {/* Additional content for better content-to-ad ratio */}
                 <div className="mt-6 bg-purple-50 p-4 rounded-lg">
-                <h4 className="font-medium text-purple-800 mb-2">Substitution Tip</h4>
+                <h4 className="font-medium text-purple-800 mb-2">Dica de Substituição</h4>
                 <p className="text-sm text-purple-700">
-                  When substituting foods, consider the volume difference. Lower calorie foods often have more volume,
-                  which can help you feel fuller while consuming fewer calories. This is especially true for vegetables
-                  and fruits compared to more calorie-dense foods.
+                  Ao substituir alimentos, considere a diferença de volume. Alimentos com menos calorias geralmente têm mais volume,
+                  o que pode ajudar você a se sentir mais satisfeito enquanto consome menos calorias. Isso é especialmente verdadeiro para vegetais
+                  e frutas em comparação com alimentos mais densos em calorias.
                 </p>
               </div>
             </CardContent>
