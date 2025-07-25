@@ -10,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Label } from "@/components/ui/label"
 import Head from 'next/head';
+import Script from "next/script"
 
 interface FoodItem {
   id: string
@@ -62,6 +63,18 @@ export default function EquivalencePage() {
   return (
     <>  
     <Head>
+              <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-ST7RSG0Q52`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ST7RSG0Q52');
+          `}
+        </Script>
     <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2627213694460628"
      crossOrigin="anonymous"></script>

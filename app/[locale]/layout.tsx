@@ -9,6 +9,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import "../globals.css"
+import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -48,6 +49,18 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-ST7RSG0Q52`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ST7RSG0Q52');
+          `}
+        </Script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>

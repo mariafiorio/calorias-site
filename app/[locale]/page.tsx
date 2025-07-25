@@ -8,13 +8,25 @@ import {useTranslations} from 'next-intl';
 import {Link} from '@/i18n/navigation';
 import { use } from "react";
 import "../globals.css"
+import Script from "next/script";
 export default function HomePage() {
     const t = useTranslations('HomePage');
 
   return (
     <>  
     <Head>
-
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-ST7RSG0Q52`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ST7RSG0Q52');
+          `}
+        </Script>
     <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
       <script
     async
