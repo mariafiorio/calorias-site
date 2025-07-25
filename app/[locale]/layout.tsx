@@ -48,14 +48,6 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST7RSG0Q52"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){window.dataLayer.push(arguments)}
-      gtag('js', new Date());
-
-      gtag('config', 'G-ST7RSG0Q52');
-    </script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <meta name="google-adsense-account" content="ca-pub-2627213694460628"/>
