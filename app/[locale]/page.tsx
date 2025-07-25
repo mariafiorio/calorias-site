@@ -17,7 +17,8 @@ export default function HomePage() {
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ST7RSG0Q52"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){window.dataLayer.push(arguments);}
+  function gtag(){window.dataLayer.push(arguments)
+  }
   gtag('js', new Date());
 
   gtag('config', 'G-ST7RSG0Q52');
